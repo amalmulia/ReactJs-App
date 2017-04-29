@@ -1,24 +1,15 @@
 import React from 'react'
 
+import Player from './Player.js'
+
 class Players extends React.Component {
 	render() {
 		// console.log(this.props);
 		return (
 			<div>
-			{this.props.members.map( (players) => {
+			{this.props.members.map( (player) => {
 				return (
-					<div>
-						<div>
-							Amal Mulia
-						</div>
-						<div>
-							<div>
-								<button>-</button>
-								<span>30</span>
-								<button>+</button>
-							</div>
-						</div>
-					</div>
+					<Player name={player.name} score={player.score} />
 				)
 			})}
 		</div>
