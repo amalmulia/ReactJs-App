@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Leaderboard extends React.Component {
-	render() {
-		return <h1>leaderboard</h1>
-	}
-}
-
+import Players from './Players.js'
+import Leaderboard from './Leaderboard.js'
 
 ReactDOM.render(
   <Leaderboard />,
