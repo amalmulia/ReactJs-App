@@ -8,6 +8,18 @@ class Player extends React.Component {
 			score: this.props.score
 		}
 	}
+
+	incrementScore(event) {
+		this.setState({
+			score: this.state.score + 1
+		})
+	}
+
+	decrementScore(event) {
+		this.setState({
+			score: this.state.score - 1
+		})
+	}
 	render() {
 		const styles = {
 			player: {
@@ -34,9 +46,9 @@ class Player extends React.Component {
 				</div>
 				<div style={styles.playerScore}>
 					<div>
-						<button style={styles.button}>-</button>
+						<button onClick={this.decrementScore.bind(this)}style={styles.button}>-</button>
 						<span style={styles.score}>{this.state.score}</span>
-						<button style={styles.button}>+</button>
+						<button onClick={this.incrementScore.bind(this)}style={styles.button}>+</button>
 					</div>
 				</div>
 			</div>
