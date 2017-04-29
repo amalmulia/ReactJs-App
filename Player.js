@@ -2,6 +2,12 @@ import React from 'react'
 
 
 class Player extends React.Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			score: this.props.score
+		}
+	}
 	render() {
 		const styles = {
 			player: {
@@ -29,7 +35,7 @@ class Player extends React.Component {
 				<div style={styles.playerScore}>
 					<div>
 						<button style={styles.button}>-</button>
-						<span style={styles.score}>{this.props.score}</span>
+						<span style={styles.score}>{this.state.score}</span>
 						<button style={styles.button}>+</button>
 					</div>
 				</div>
