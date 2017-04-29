@@ -2,20 +2,25 @@ import React from 'react'
 
 class Players extends React.Component {
 	render() {
+		// console.log(this.props);
 		return (
-		<div>
 			<div>
-				<div>
-					Amal Mulia
-				</div>
-				<div>
+			{this.props.members.map( (players) => {
+				return (
 					<div>
-						<button>-</button>
-						<span>30</span>
-						<button>+</button>
+						<div>
+							Amal Mulia
+						</div>
+						<div>
+							<div>
+								<button>-</button>
+								<span>30</span>
+								<button>+</button>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
+				)
+			})}
 		</div>
 		)
 	}
