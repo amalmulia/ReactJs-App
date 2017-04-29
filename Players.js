@@ -9,7 +9,7 @@ class Players extends React.Component {
 			<div>
 			{this.props.members.map( (player) => {
 				return (
-					<Player name={player.name} score={player.score} />
+					<Player key={player.id} name={player.name} score={player.score} />
 				)
 			})}
 		</div>
