@@ -16,7 +16,7 @@ class Player extends React.Component {
 			score: this.state.score + 1
 		})
 	}
-
+ 
 	decrementScore(event) {
 		this.setState({
 			score: this.state.score - 1
@@ -57,5 +57,7 @@ class Player extends React.Component {
 		)
 	}
 }
+
+
 
 export default Player

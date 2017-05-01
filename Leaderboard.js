@@ -4,7 +4,16 @@ import Players from './Players.js'
 
 import AddPlayer from './AddPlayer.js'
 
+/*global AddPLayer*/
+/*eslint-env browser*/
+
+AddPlayer.propTypes = {
+  AddPlayer: React.PropTypes.string.isRequired
+}
+
+
 class Leaderboard extends React.Component {
+
 	constructor(props) {
 		super(props)
 
@@ -31,8 +40,8 @@ class Leaderboard extends React.Component {
 	 	return (
 			<div style={styles.container}>
 				<h1>leaderboard</h1>
-				<Players members={this.state.members}/>
-				<AddPLayer />
+				<Players members={this.state.members} />
+				<AddPlayer />
 			</div>
 		)
 	}

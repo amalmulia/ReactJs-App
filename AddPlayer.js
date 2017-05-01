@@ -1,4 +1,5 @@
 import React from 'react'
+/*global AddPLayer*/
 
 class AddPLayer extends React.Component {
 	render() {
@@ -10,6 +11,5 @@ class AddPLayer extends React.Component {
 		)
 	}
 }
-
 
 export default AddPLayer
